@@ -15,16 +15,24 @@ function App() {
     <div className="App">
       <h1> hello </h1>
 
+    <form action="">
       <input 
       type="text" 
       value={input}
       onChange = {event => setInput(event.target.value)}/>
 
-      <button onClick={sendMessage}> send message </button>
+      <button type='submit' onClick={sendMessage}> send message </button>
+    </form>
+      
+
+      
       {/* messages themselves */}
       {messages.map((message) => (
         <p>{message}</p>
       ))}
+
+
+
     </div>
   );
 }
